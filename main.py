@@ -20,10 +20,18 @@ class List:
         return item
 
 
-nested_list = [['a', 'b', 'c'], ['d', 'e', 'f', 'h', False], [1, 2, None]]
-for item in List(nested_list):
-    print(item)
+# nested_list = [['a', 'b', 'c'], ['d', 'e', 'f', 'h', False], [1, 2, None]]
+# for item in List(nested_list):
+#     print(item)
+# flat_list = []
+# for item in List(nested_list):
+#     flat_list.append(item)
+# print(flat_list)
+
+nested_list = [[1, 2, 'b'], [100, None, False]]
 flat_list = []
+exepcted = [1, 2, 'b', 100, None, False]
 for item in List(nested_list):
     flat_list.append(item)
 print(flat_list)
+assert flat_list == exepcted
